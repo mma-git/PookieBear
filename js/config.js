@@ -4,7 +4,7 @@
 const CONFIG = {
     
     //Title for browser
-    pageTitle: "Pookie?",
+    pageTitle: "Be Mine? 💌",
     //random
     sike:[
         'AHAHHHAHA SIKE BYEEE',
