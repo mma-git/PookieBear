@@ -144,15 +144,15 @@ function showRandomImage() {
       // Check if an overlay already exists. If so, update the image.
       let overlay = document.querySelector('.overlay-container');
       let img;
-      if (overlay) {
-          img = overlay.querySelector('img');
-          if (img) {
-              img.src = randomImageUrl;
-          } else {
-              console.error("Image element not found in overlay.");
-              return;
-          }
-      } else {
+    //   if (overlay) {
+    //       img = overlay.querySelector('img');
+    //       if (img) {
+    //           img.src = randomImageUrl;
+    //       } else {
+    //           console.error("Image element not found in overlay.");
+    //           return;
+    //       }
+    //   } else {
           // Create elements only if the overlay doesn't exist.
           img = document.createElement('img');
           img.src = randomImageUrl;
@@ -183,7 +183,7 @@ function showRandomImage() {
           overlay.addEventListener('click', () => {
             document.body.removeChild(overlay);
           });
-      }
+    //   }
   
   
   }
