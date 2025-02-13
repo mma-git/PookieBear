@@ -6,6 +6,11 @@ const CONFIG = {
     //Title for browser
     pageTitle: "Pookie?",
     //random
+    sike:[
+        'AHAHHHAHA SIKE BYEEE',
+        'big green button hello?',
+        'nuh uh'
+    ],
     images: [
         'images/desk.gif',
         'images/hug-couple.gif',
@@ -13,9 +18,9 @@ const CONFIG = {
         'images/dance.gif'],
     //end pics
     mwahimages:[
-        '/images/2.gif',
-        '/images/1.gif',
-        '/images/bear-hug.gif'],
+        'images/2.gif',
+        'images/1.gif',
+        'images/bear-hug.gif'],
     //Floating Emojis
     floatingEmojis:{
         hearts: ['❤️', '💖', '💕', '💗', '💓','💞'],  // Heart emojis
@@ -43,12 +48,12 @@ const CONFIG = {
         third:{
             text:"ONE MORE CHANCE",
             yesbtn:"THIS ONE",
-            nobtn:"don't you dare"
+            nobtn:"don't you dare "
         },
         fourth:{
-            text:"Women's Suffrage Act? Whats that",
+            text:"Women's Suffrage? Whats that",
             yesbtn:"YES YES YES I WANNA BE YOUR POOKIEBEAR",
-            nobtn:"its over"
+            nobtn:""
         }
     },
 

@@ -207,15 +207,21 @@ function showRandomImage() {
       console.error("Button with ID 'myButton' not found.");
     }
   });
-
+  let currentTextIndex = 0;
   function moveButton(button) {
     const x = Math.random() * (window.innerWidth - button.offsetWidth);
     const y = Math.random() * (window.innerHeight - button.offsetHeight);
     button.style.position = 'fixed';
     button.style.left = x + 'px';
     button.style.top = y + 'px';
+    const buttontext=CONFIG.sike;
+    
     var no4 = document.getElementById("no4");
-    no4.textContent="AHAHHHAHA SIKE BYEEE"
+    no4.textContent=buttontext[currentTextIndex];
+    currentTextIndex++;
+    if(currentTextIndex>=buttontext.length){
+        currentTextIndex=0;//loop it back
+    }
 
 }
 
