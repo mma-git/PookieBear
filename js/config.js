@@ -51,9 +51,9 @@ const CONFIG = {
             nobtn:"don't you dare "
         },
         fourth:{
-            text:"Women's Suffrage? Whats that",
+            text:"Choices? whats that",
             yesbtn:"YES YES YES I WANNA BE YOUR POOKIEBEAR",
-            nobtn:""
+            nobtn:"its over"
         }
     },
 
