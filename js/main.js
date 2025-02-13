@@ -218,3 +218,100 @@ function showRandomImage() {
     no4.textContent="AHAHHHAHA SIKE BYEEE"
 
 }
+
+function mwahpics() {
+    const images = CONFIG.mwahimages;
+    // const images= ["/images/olololooo-fish-mouth.gif","/images/desk.gif","/images/hug-couple.gif","/images/smoochies.gif","/images/dance.gif"];
+
+    if (!Array.isArray(images) || images.length === 0) {
+      console.error("images must be a non-empty array in the config file.");
+      return;
+    }
+  
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const randomImageUrl = images[randomIndex];
+  
+      // Check if an overlay already exists. If so, update the image.
+      let overlay = document.querySelector('.picture-position2');
+      let img;
+      if (overlay) {
+          img = overlay.querySelector('img');
+          if (img) {
+              img.src = randomImageUrl;
+          } else {
+              console.error("Image element not found in overlay.");
+              return;
+          }
+      } else {
+          // Create elements only if the overlay doesn't exist.
+          img = document.createElement('img');
+          img.src = randomImageUrl;
+          img.alt = "Random Image";
+          img.style.maxWidth = "100%";
+          img.style.maxHeight = "100%";
+          img.style.width="135px";
+          img.style.height="135px";
+          img.style.objectFit="contain";
+          img.style.display = 'block';
+          img.style.margin = '0 auto';
+          img.id="randomimg";
+          overlay = document.createElement('div');
+          overlay.classList.add('img-answer'); // Add a class for easy selection
+          overlay.style.position = 'fixed';
+          overlay.style.top = '0';
+          overlay.style.left = '0';
+          overlay.style.width = '100%';
+          overlay.style.height = '100%';
+        //   overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; removed opacity
+          overlay.style.display = 'flex';
+          overlay.style.justifyContent = 'center';
+          overlay.style.alignItems = 'center';
+  
+          overlay.appendChild(img);
+          document.body.appendChild(overlay);
+  
+          overlay.addEventListener('click', () => {
+            document.body.removeChild(overlay);
+          });
+      }
+  
+  
+  }
+  document.addEventListener('DOMContentLoaded', () => { // Wait for DOM to load
+    const button = document.getElementById('mwah'); // Replace 'myButton' with your button's ID
+  
+    if (button) {
+      button.addEventListener('click', mwahpics);
+    } else {
+      console.error("Button with ID 'myButton' not found.");
+    }
+  });
+// function mwahpics(){
+//     const images=['/images/2.gif','/images/bear-hug.gif','/images/1.gif']
+//     const container = document.getElementById("picture-position");
+//     // container.innerHTML = "";
+//     const randomIndex = Math.floor(Math.random() * images.length);
+//     let overlay = document.querySelector('.picture-position');
+
+//     // for (let i = 0; i < images.length; i++) {
+//     //     const img = document.createElement("img");
+//     //     img.src = images[i];
+//     //     img.alt = "Image " + (i + 1); // Set alt text for accessibility
+//     //     // img.style.maxWidth = "200px"; // Adjust as needed
+//     //     // img.style.maxHeight = "200px"; // Adjust as needed
+//     //     // img.style.margin = "10px"; // Add some spacing between images
+//     //     container.appendChild(img);
+//     //   }
+// //   container.innerHTML = ""; // Clear previous images
+
+
+//     document.addEventListener('DOMContentLoaded', () => { // Wait for DOM to load
+//         const button = document.getElementById('mwah'); // Replace 'myButton' with your button's ID
+      
+//         if (button) {
+//           button.addEventListener('click', mwahpics);
+//         } else {
+//           console.error("Button with ID 'myButton' not found.");
+//         }
+//       });
+// }

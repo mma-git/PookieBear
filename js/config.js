@@ -5,11 +5,17 @@ const CONFIG = {
     
     //Title for browser
     pageTitle: "Pookie?",
-    images: ['images/olololooo-fish-mouth.gif',
+    //random
+    images: [
         'images/desk.gif',
         'images/hug-couple.gif',
         'images/smoochies.gif',
         'images/dance.gif'],
+    //end pics
+    mwahimages:[
+        '/images/2.gif',
+        '/images/1.gif',
+        '/images/bear-hug.gif'],
     //Floating Emojis
     floatingEmojis:{
         hearts: ['❤️', '💖', '💕', '💗', '💓','💞'],  // Heart emojis
