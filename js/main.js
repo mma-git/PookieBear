@@ -130,8 +130,9 @@ function createHeartExplosion() {
     }
 }
 function showRandomImage() {
-    const images = CONFIG.images;
-  
+    // const images = CONFIG.images;
+    const images= ["/images/olololooo-fish-mouth.gif","/images/desk.gif","/images/hug-couple.gif","/images/smoochies.gif","/images/dance.gif"];
+    
     if (!Array.isArray(images) || images.length === 0) {
       console.error("images must be a non-empty array in the config file.");
       return;
@@ -202,4 +203,7 @@ function showRandomImage() {
     button.style.position = 'fixed';
     button.style.left = x + 'px';
     button.style.top = y + 'px';
+    var no4 = document.getElementById("no4");
+    no4.textContent="AHAHHHAHA SIKE BYEEE"
+
 }
