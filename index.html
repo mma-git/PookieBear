@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- browser title -->
+    <!-- <title>&#128150;</title> -->
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Roboto&display=swap" rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet"  href="/css/stylesheet.css">
+
+</head>
+<body>
+    <button class="refresh" onclick="window.location.reload();">Again! Again!</button>
+    <!-- floating background elements -->
+     <div class="floating-elements">
+    <!-- JS TO ADD FLOATERS EMOJIS -->
+     </div>
+     <!-- speech bubble -->
+     <!--end speech bubble-->
+     <!-- TOROS -->        
+      <div class="toros">
+        <input type="image" id="toros-pic" src="/images/toros.gif" alt="" onclick="">
+
+            <div id="speech-bubble">
+                <div id="bub-part-a"></div>
+                <div id="bub-part-b"></div>
+                <div id="bub-part-c"></div>
+                <div id="speech-txt">click me!</div>
+                <div id="bub-part-c"></div>
+                <div id="bub-part-b"></div>
+                <div id="bub-part-a"></div>
+        
+                <div id="speech-arrow">
+                    <div id="arrow-w"></div>
+                    <div id="arrow-x"></div>
+                    <div id="arrow-y"></div>
+                    <div id="arrow-z"></div>
+                </div><!--end arrow-->
+        </div>
+
+        </div>
+
+     <!-- MAIN CONTENT -->
+    <div class="container">
+        <!-- Valentine Prompt -->
+        <div class="question-section" id="question1"> 
+            <div class="picture-container">
+                <div class="picture-position">
+                    <img id="be-mine" src="/images/be-my-love.gif">
+                </div>
+            </div>
+            <h2 id="question1Text"> </h2> 
+            <div class="button-container">
+                <div class="button-position">
+                        <button class="answer" id="yes1" onclick="celebrate()">
+                        </button>
+                        <button class="answer" id="no1" onclick="showNextQuestion(2)"></button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- FIRST NO PROMPT 2 -->
+        <div class="question-section hidden" id="question2">
+            <div class="picture-container">
+                <div class="picture-position">
+                    <img id="be-mine" src="/images/wtf.gif">
+                </div>
+            </div>
+            <h2 id="question2Text"></h2>
+            <button class="answer" onclick="celebrate()" id="yes2"></button>
+            <button class="answer" onclick="showNextQuestion(3)" id="no2"></button>
+        </div>
+
+
+        <!-- 2ND NO PROMPT 3 -->
+        <div class="question-section hidden" id="question3">
+            <div class="picture-container">
+                <div class="picture-position">
+                    <img id="be-mine" src="/images/wrong-answer.gif">
+                </div>
+            </div>
+            <h2 id="question3Text"></h2>
+            <button class="answer" onclick="celebrate()" id="yes3"></button>
+            <button class="answer" onclick="showNextQuestion(4)" id="no3"></button>
+        </div>
+        <!-- FINAL NO PROMPT -->
+        <div class="question-section hidden" id="question4">
+            <div class="picture-container">
+                <div class="picture-position">
+                    <img id="be-mine" src="/images/fart.gif">
+                </div>
+            </div>
+            <h2 id="question4Text"></h2>
+            <button class="answer" onclick="celebrate()" id="yes4"></button>
+            <!-- <button class="answer" onclick="showNextQuestion(4)" id="no4"></button> -->
+        </div>
+
+
+        <!-- CELEBRATION YES ANSWER -->
+        <div class="celebration hidden" id="celebration">
+            <div class="picture-container">
+                <div class="picture-position">
+                    <img id="be-mine" src="/images/bear-hug.gif">
+                </div>
+            </div>
+
+            <h2 id="celebrationTitle"></h2>
+            <p class="celebration-text" id="celebrationMessage"></p>
+            <p class="celebration-text" id="celebrationEmojis"></p>
+        </div>
+    </div>
+    
+    <!-- end main container -->
+    </div>
+    <!-- Overlay when button clicked? -->
+    <div class="overlay-container" id="overlay">
+        <div class="image-answer">
+            <img src="">
+        </div>
+    </div>
+    
+    <!-- scripts -->
+    <script src="/js/config.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>

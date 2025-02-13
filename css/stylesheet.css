@@ -1,0 +1,311 @@
+
+*{
+    -webkit-tap-highlight-color: transparent;
+    --float-duration: 15s;
+    --float-distance: 50px;
+    --bounce-speed: 0.5s;
+    --heart-explosion-size: 1.5;
+}
+:root {
+	--Speech-Bubble-Border:#222;
+	--Speech-Bubble-Background:#fcfcfc;
+	--Speech-Bubble-Text:#000;
+}
+
+#speech-bubble {
+	width:100px;
+    position:relative;
+    top: 0px;
+    right: 10px;
+    z-index: 4;
+}
+
+#bub-part-a {
+	margin-left:6px;
+	width:calc(100% - 12px);
+	height:2px;
+	background:var(--Speech-Bubble-Border);
+}
+
+#bub-part-b {
+	margin-left:4px;
+	width:calc(100% - 12px);
+	height:2px;
+	background:var(--Speech-Bubble-Background);
+	border-left:2px solid var(--Speech-Bubble-Border);
+	border-right:2px solid var(--Speech-Bubble-Border);
+}
+
+#bub-part-c {
+	margin-left:2px;
+	width:calc(100% - 8px);
+	height:2px;
+	background:var(--Speech-Bubble-Background);
+	border-left:2px solid var(--Speech-Bubble-Border);
+	border-right:2px solid var(--Speech-Bubble-Border);
+}
+
+#speech-txt {
+	width:calc(100% - 24px);
+	padding:10px;
+	font-family:silkscreen;
+	font-size:15px;
+	color:var(--Speech-Bubble-Text);
+	text-align:center;
+	background:var(--Speech-Bubble-Background);
+	border-left:2px solid var(--Speech-Bubble-Border);
+	border-right:2px solid var(--Speech-Bubble-Border);
+    font: inherit;
+}
+
+#speech-arrow {
+	margin-top:-3px;
+	margin-left:10px;
+    transform: rotate(0deg);
+    /* z-index: 2; */
+    /* transform: scaleX(-1) */
+    
+}
+
+#arrow-w {
+	width:8px;
+	height:8px;
+	background:var(--Speech-Bubble-Background);
+	border-left:2px solid var(--Speech-Bubble-Border);
+	border-right:2px solid var(--Speech-Bubble-Border);
+}
+
+#arrow-x {
+	width:6px;
+	height:2px;
+	background:var(--Speech-Bubble-Background);
+	border-left:2px solid var(--Speech-Bubble-Border);
+	border-right:2px solid var(--Speech-Bubble-Border);
+}
+
+#arrow-y {
+	margin-left:-2px;
+	width:6px;
+	height:2px;
+	background:var(--Speech-Bubble-Background);
+	border-left:2px solid var(--Speech-Bubble-Border);
+	border-right:2px solid var(--Speech-Bubble-Border);
+}
+
+#arrow-z {
+	margin-left:-2px;
+	width:8px;
+	height:2px;
+	background:var(--Speech-Bubble-Border);
+}
+body{
+    background-color: #e3627b; 
+    font-family: "Darumadrop One", serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+
+}
+.refresh{
+    position:fixed;
+    bottom:10px;
+    /* left: 300px; */
+    opacity: .45;
+    font-family: inherit; 
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgba(231, 143, 143, 0.945);;
+    border-color: black;
+    padding: 10px 20px;
+    /* margin: 10px; */
+    text-align: center;
+    width: auto;
+    margin: 10px;
+
+}
+.refresh:active{
+    
+        box-shadow: 2px 2px 5px #fc894d
+        
+    
+}
+.floating-elements {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+.heart, .bear {
+    position: absolute;
+    font-size: 2rem;
+    animation: float var(--float-duration) linear infinite;
+}
+@keyframes float {
+    0% {
+        transform: translateY(100vh) translateX(0);
+    }
+    100% {
+        transform: translateY(-100px) translateX(var(--float-distance));
+    }
+}
+.toros{
+    display: flex;
+    justify-content: center; 
+    overflow: hidden;
+    max-width: auto ;
+    height: auto;
+    /* background-color: black; */
+    color: wheat;
+    text-align: center;
+    vertical-align: middle;
+    height: 100px;
+    width: 200px;
+    position:fixed;
+    top: 50px;
+    /* left: 10; */
+    /* z-index: 999; */
+    width: 50%;
+    /* height: 23px; */
+    /* display: flex;
+    justify-content: center;
+    align-items:flex-start; */
+
+}
+
+#toros-pic{
+    max-width: 100%;
+    max-height: 100%;
+   /* transform: scaleX(-1) */
+
+}
+
+.container {
+    
+    background: rgba(231, 143, 143, 0.945);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    margin: 20px;
+    overflow: visible !important;
+}
+/* .picture-container{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100%;
+} */
+.picture-position{
+    height: 100%;
+    max-width: 100%;
+    /* background-color: white; */
+    /* border-radius: 20px; */
+
+    
+}
+#be-mine{
+    max-width: 50%;
+    max-height: 50%;
+}
+/* .yes-container{
+    height: 1000px;
+    position: relative; */ 
+    /* /* background-color: black;
+    background-color: red;
+} */
+.button-position{
+    display: flex;
+
+}
+.button-position{
+    /* display: flex; */
+    flex-grow: 1;
+    justify-content: right; 
+    align-items: center;
+    position: ab
+    /* height: auto;  */
+    /* border: 1px solid green; 
+    background-color: black; */
+}
+.answer{
+    
+    background-color: green;
+    font-family: inherit; 
+    cursor: pointer;
+    border-radius: 20px;
+    border-color: black;
+    padding: 10px 20px;
+    margin: 10px;
+    text-align: center;
+    /* width: auto; */
+    /* transition: transform 0.3s, background 0.3s; */
+
+}
+
+#no1.answer
+{
+    background-color: red;
+    /* position: absolute; */
+    
+} 
+#no2.answer,
+#no3.answer
+{
+    background-color: red;
+    /* position: absolute; */
+    
+}
+#yes4.answer{
+    font-size: 30px;
+}
+.hidden{
+    display:none
+}
+#kick{
+    display: none;
+}
+
+.celebration-text {
+    font-size: 1em;
+    color: #ff4757;
+    font-weight: bold;
+    margin: 30px 0;
+    animation: bounce var(--bounce-speed) infinite alternate;
+    text-shadow: 2px 2px 4px rgba(255, 71, 87, 0.3);
+}
+
+@keyframes subtle-hint {
+    0% { opacity: 0.2; }
+    100% { opacity: 0.3; }
+}
+.answer:hover{
+    transform: scale(1.2);
+}
+
+.answer:active{
+    box-shadow: 2px 2px 5px #fc894d
+    
+}
+.hearts-explosion {
+    font-size: 2rem;
+    animation: explode 1s ease-out forwards;
+    margin-top: 30px;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(var(--heart-explosion-size));
+    }
+    100% {
+        transform: scale(1);
+    }
+}
