@@ -1,5 +1,5 @@
 
-const images = ["/images/olololooo-fish-mouth.gif","/images/desk.gif","/images/hug-couple.gif","/images/smoochies.gif"];
+const images = ["images/olololooo-fish-mouth.gif","images/desk.gif","images/hug-couple.gif","images/smoochies.gif"];
 
 const CONFIG = {
     
@@ -34,7 +34,8 @@ const CONFIG = {
         },
         fourth:{
             text:"Women's Suffrage Act? Whats that",
-            yesbtn:"YES YES YES I WANNA BE YOUR POOKIEBEAR"
+            yesbtn:"YES YES YES I WANNA BE YOUR POOKIEBEAR",
+            nobtn:"its over"
         }
     },
 

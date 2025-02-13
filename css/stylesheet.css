@@ -248,14 +248,10 @@ body{
 
 }
 
-#no1.answer
-{
-    background-color: red;
-    /* position: absolute; */
-    
-} 
+#no1.answer,
 #no2.answer,
-#no3.answer
+#no3.answer,
+#no4.answer
 {
     background-color: red;
     /* position: absolute; */

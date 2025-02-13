@@ -63,7 +63,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // // Set final question texts
     document.getElementById('question4Text').textContent = config.questions.fourth.text;
     document.getElementById('yes4').textContent = config.questions.fourth.yesbtn;
-    // document.getElementById('no4').textContent = config.questions.third.nobtn;
+    document.getElementById('no4').textContent = config.questions.fourth.nobtn;
 
     // Create initial floating elements
     createFloatingElements();
@@ -195,3 +195,11 @@ function showRandomImage() {
       console.error("Button with ID 'myButton' not found.");
     }
   });
+
+  function moveButton(button) {
+    const x = Math.random() * (window.innerWidth - button.offsetWidth);
+    const y = Math.random() * (window.innerHeight - button.offsetHeight);
+    button.style.position = 'fixed';
+    button.style.left = x + 'px';
+    button.style.top = y + 'px';
+}
