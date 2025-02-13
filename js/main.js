@@ -130,8 +130,8 @@ function createHeartExplosion() {
     }
 }
 function showRandomImage() {
-    // const images = CONFIG.images;
-    const images= ["/images/olololooo-fish-mouth.gif","/images/desk.gif","/images/hug-couple.gif","/images/smoochies.gif","/images/dance.gif"];
+    const images = CONFIG.images;
+    // const images= ["/images/olololooo-fish-mouth.gif","/images/desk.gif","/images/hug-couple.gif","/images/smoochies.gif","/images/dance.gif"];
 
     if (!Array.isArray(images) || images.length === 0) {
       console.error("images must be a non-empty array in the config file.");
