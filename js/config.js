@@ -1,5 +1,5 @@
 
-const images = ["images/olololooo-fish-mouth.gif","images/desk.gif","images/hug-couple.gif","images/smoochies.gif"];
+const images = ["/images/olololooo-fish-mouth.gif","/images/desk.gif","/images/hug-couple.gif","/images/smoochies.gif"];
 
 const CONFIG = {
     
