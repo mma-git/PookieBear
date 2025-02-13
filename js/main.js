@@ -132,7 +132,7 @@ function createHeartExplosion() {
 function showRandomImage() {
     // const images = CONFIG.images;
     const images= ["/images/olololooo-fish-mouth.gif","/images/desk.gif","/images/hug-couple.gif","/images/smoochies.gif","/images/dance.gif"];
-    
+
     if (!Array.isArray(images) || images.length === 0) {
       console.error("images must be a non-empty array in the config file.");
       return;
@@ -142,7 +142,7 @@ function showRandomImage() {
     const randomImageUrl = images[randomIndex];
   
       // Check if an overlay already exists. If so, update the image.
-      let overlay = document.querySelector('.image-overlay');
+      let overlay = document.querySelector('.overlay-container');
       let img;
       if (overlay) {
           img = overlay.querySelector('img');
@@ -157,13 +157,16 @@ function showRandomImage() {
           img = document.createElement('img');
           img.src = randomImageUrl;
           img.alt = "Random Image";
-          img.style.maxWidth = '90%';
-          img.style.maxHeight = '90%';
+          img.style.maxWidth = "100%";
+          img.style.maxHeight = "100%";
+          img.style.width="128px";
+          img.style.height="128px";
+          img.style.objectFit="contain";
           img.style.display = 'block';
           img.style.margin = '0 auto';
-  
+          img.id="randomimg";
           overlay = document.createElement('div');
-          overlay.classList.add('image-overlay'); // Add a class for easy selection
+          overlay.classList.add('overlay-container'); // Add a class for easy selection
           overlay.style.position = 'fixed';
           overlay.style.top = '0';
           overlay.style.left = '0';

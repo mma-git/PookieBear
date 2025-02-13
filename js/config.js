@@ -41,8 +41,8 @@ const CONFIG = {
 
     celebration: {
         title: "Happy Valentine's Day! ",
-        message: "Pookiebear 4 lyfe!",
-        emojis: "🎉💝💖💝💓"  // These will bounce around
+        message: "Pookiebears 4 lyfe!",
+        emojis: "🎉💝I Love You💝💓"  // These will bounce around
     },
 
     // Animation settings
