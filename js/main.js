@@ -92,6 +92,14 @@ function createFloatingElements() {
         setRandomPosition(div);
         container.appendChild(div);
     });
+    // config.floatingEmojis.imgs.forEach(imgs => {
+    //     const div = document.createElement('img');
+    //     div.className = 'dancingbear';
+    //     div.src=imgs;
+    //     div.innerHTML = imgs;
+    //     setRandomPosition(div);
+    //     container.appendChild(div);
+    // });
 }
 
 function setRandomPosition(element) {
@@ -142,37 +150,37 @@ function showRandomImage() {
     const randomImageUrl = images[randomIndex];
   
       // Check if an overlay already exists. If so, update the image.
-      let overlay = document.querySelector('.overlay-container');
+      let overlay = document.querySelector('.img-answer');
       let img;
-    //   if (overlay) {
-    //       img = overlay.querySelector('img');
-    //       if (img) {
-    //           img.src = randomImageUrl;
-    //       } else {
-    //           console.error("Image element not found in overlay.");
-    //           return;
-    //       }
-    //   } else {
+      if (overlay) {
+          img = overlay.querySelector('img');
+          if (img) {
+              img.src = randomImageUrl;
+          } else {
+              console.error("Image element not found in overlay.");
+              return;
+          }
+      } else {
           // Create elements only if the overlay doesn't exist.
           img = document.createElement('img');
           img.src = randomImageUrl;
           img.alt = "Random Image";
           img.style.maxWidth = "100%";
           img.style.maxHeight = "100%";
-          img.style.width="128px";
-          img.style.height="128px";
+          img.style.width="135px";
+          img.style.height="135px";
           img.style.objectFit="contain";
           img.style.display = 'block';
           img.style.margin = '0 auto';
           img.id="randomimg";
           overlay = document.createElement('div');
-          overlay.classList.add('overlay-container'); // Add a class for easy selection
+          overlay.classList.add('img-answer'); // Add a class for easy selection
           overlay.style.position = 'fixed';
           overlay.style.top = '0';
           overlay.style.left = '0';
           overlay.style.width = '100%';
           overlay.style.height = '100%';
-          overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        //   overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; removed opacity
           overlay.style.display = 'flex';
           overlay.style.justifyContent = 'center';
           overlay.style.alignItems = 'center';
@@ -183,7 +191,7 @@ function showRandomImage() {
           overlay.addEventListener('click', () => {
             document.body.removeChild(overlay);
           });
-    //   }
+      }
   
   
   }

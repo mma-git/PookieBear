@@ -1,15 +1,22 @@
 
-const images = ["../images/olololooo-fish-mouth.gif","../images/desk.gif","../images/hug-couple.gif","../images/smoochies.gif"];
+// const images = ["../images/olololooo-fish-mouth.gif","../images/desk.gif","../images/hug-couple.gif","../images/smoochies.gif"];
 
 const CONFIG = {
     
     //Title for browser
     pageTitle: "Pookie?",
-    images: ["/images/olololooo-fish-mouth.gif","/images/desk.gif","/images/hug-couple.gif","/images/smoochies.gif","/images/dance.gif"],
+    images: ['images/olololooo-fish-mouth.gif',
+        'images/desk.gif',
+        'images/hug-couple.gif',
+        'images/smoochies.gif',
+        'images/dance.gif'],
     //Floating Emojis
     floatingEmojis:{
         hearts: ['❤️', '💖', '💕', '💗', '💓','💞'],  // Heart emojis
-        bears: ['🧸', '🐻','🙊','🥰']                       // Cute bear emojis
+        bears: ['🧸', '🐻','🙊','🥰',],                       // Cute bear emojis
+        // imgs:[
+        //     '/images/dance.gif'
+        // ]
     },
 
     //Prompts and answers
